@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page title</title>
+    <style >
+        body {
+            background-color: darkblue;
+        }
+        .button {
+            background-color: blue;
+            color: white;
+            padding:17px;
+            border:none;
+            border-radius:7px;
+            width:100%;
+            height:50px;
+        }
+        .input {
+            padding:15px;
+            background-color: darkblue;
+            color: white;
+            border:none;
+            border-radius:10px;
+            width:90%;
+            box-shadow:3px 2px 7px 2px whitesmoke;
+        }
+        .input:focus{
+            outline:none;
+            border:1px solid whitesmoke;
+        }
+        h1{
+            text-align: center;
+            font-size:30px;
+            color: white;
+        }
+        form{
+            margin-left:7px;
+        }
+        p{
+            color: white;
+        }
+        .link{
+            text-decoration:none;
+            color: lightgreen;
+        }
+        section {
+            border:none;
+            border-radius:10px;
+            background-color: darkblue;
+            box-shadow:1px 1px 1px 2px whitesmoke;
+            padding:10px;
+            height:700px;
+        }
+        .myp{
+            display:none;
+            color:red;
+        }
+        .img{
+            width:100%;
+            border-radius:10px;
+            height:90px;
+            box-shadow:1px 1px 1px 2px lightblue;
+        }
+        .b1{
+            color: white;
+            font-style:italic;
+            font-size:30px;
+        }
+        .mylist{
+            display: block;
+            background-color: black;
+            width: 86%;
+            padding: 20px;
+            border-radius: 20px;
+        }
+        .mybtn{
+            border: none;
+            width: 60%;
+            background-color: black;
+            color: white;
+
+        }
+    </style>
+</head>
+<body>
+    <section class="container">
+        <div class="fst">
+              <img src="mai.png" alt=""class="img">
+        </div>
+        <h1>Create An Account</h1>
+        <form>
+            <input type ="text"class="input"id="fullname"placeholder="Enter Full Name">
+            <p class="myp"id="myp1">Full name is required....</p>
+            <br>
+            <br>
+            <input type ="text"class="input"id="username"placeholder="Enter Username"/>
+            <p class="myp"id="myp2">username is required....</p>
+            <br>
+            <br>
+            <input type ="number"class="input"id="phonenumber"placeholder="Enter phone number"/>
+            <p class="myp"id="myp3">phone number is required....</p>
+            <br>
+            <br>
+            <input type="text" placeholder ="Select Package" class="input"id="package">
+            <p class="myp"id="myp4">select package please...</p>
+            <br>
+            <div class="mylist"id='mylist'>
+              <button class="mybtn"id="selpack">Select Package</button>
+              <hr>
+              <button class="mybtn"id="pluspack">Miamor plus package 9000</button>
+              <hr>
+              <button class="mybtn"id="ultrapack">Miamor ultra package 14000</button>
+            </div>
+            <br>
+            <input type ="text"class="input"id="coupon"placeholder="Enter coupon"/>
+            <p class="myp"id="myp5">coupon code is required....</p>
+            <p>Don't have a coupon?<a href="https://wa.link/nlkqak" class="link">Get one now!</a></p>
+            <input type ="password"class="input"placeholder="Enter password"id="password"/>
+             <p class="myp"id="myp6">password is required....</p>
+            <br>
+            <br>
+            <button class="button" onclick="signup ()">Signup</button>
+        </form>
+    </section>
+    <script>
+        function signup() {
+            event.preventDefault();
+            
+            let coupon = document.getElementById("coupon");
+            let fullname = document.getElementById("fullname");
+            let username = document.getElementById("username");
+            let phonenumber = document.getElementById("phonenumber");
+            let package = document.getElementById("package");
+            let password = document.getElementById("password");
+
+            let myp1 = document.getElementById("myp1");
+            let myp2 = document.getElementById("myp2");
+            let myp3 = document.getElementById("myp3");
+            let myp4 = document.getElementById("myp4");
+            let myp5 = document.getElementById("myp5");
+            let myp6 = document.getElementById("myp6");
+            
+            // Reset all error messages
+            myp1.style.display = "none";
+            myp2.style.display = "none";
+            myp3.style.display = "none";
+            myp4.style.display = "none";
+            myp5.style.display = "none";
+            myp6.style.display = "none";
+            
+            let isValid = true;
+            
+            if (fullname.value === "") {
+                myp1.style.display = "block";
+                isValid = false;
+                fullname.style.border="1px solid red"
+            }
+            if (username.value === "") {
+                myp2.style.display = "block";
+                isValid = false;
+                username.style.border="1px solid red"
+            }
+            if (phonenumber.value === "") {
+                myp3.style.display = "block";
+                isValid = false;
+                phonenumber.style.border="1px solid red"
+            }
+            if (package.value === "") {
+                myp4.style.display = "block";
+                isValid = false;
+                package.style.border="1px solid red"
+            }
+            if (coupon.value === "") {
+                myp5.style.display = "block";
+                isValid = false;
+                coupon.style.border="1px solid red"
+            }
+            if (password.value === "") {
+                myp6.style.display = "block";
+                isValid = false;
+                password.style.border="1px solid red"
+            }
+        }
+        
+        let selpack=document.getElementById('selpack');
+        let pluspack=document.getElementById('pluspack');
+        let ultrapack=document.getElementById('ultrapack');
+        let package = document.getElementById("package");
+        let mylist=document.getElementById('mylist');
+        mylist.style.display='none';
+        mylist.style.position='fixed';
+        selpack.addEventListener('click',()=>{
+            event.preventDefault();
+            package.value='Select package';
+            mylist.style.display='none';
+        });
+        pluspack.addEventListener('click',()=>{
+            event.preventDefault();
+            package.value='Miamor plus package 9000';
+            mylist.style.display='none';
+        });
+        ultrapack.addEventListener('click',()=>{
+            event.preventDefault();
+            package.value='miamor ultra package 14000';
+            mylist.style.display='none';
+        });
+        package.addEventListener('click',()=>{
+           event.preventDefault();
+           mylist.style.display='block';
+        });
+    </script>
+</body>
+</html>

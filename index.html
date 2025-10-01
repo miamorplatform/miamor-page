@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <style>
+        .img {
+            width: 45px;
+            border-radius: 360px;
+            height: 60px;
+        }
+        .logo-text {
+            font-size: 50px;
+            margin-top: 6px;
+            font-weight: normal; /* This ensures it's not bold */
+        }
+        .mis {
+            display: flex;
+            gap: 0px;
+            align-items: center; /* Better alignment for logo and text */
+        }
+        .header {
+            display: flex;
+            gap: 50px;
+            position: fixed;
+            background-color: white;
+            width: 100%;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 80px;
+            margin-left: 4px;
+            align-items: center; /* Better vertical alignment */
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Optional: adds subtle shadow */
+        }
+        .msu {
+            text-decoration: none;
+            border-radius: 5px;
+            padding: 12px;
+            color: white;
+            background-color: darkblue;
+            margin-top: 18px;
+            display: block;
+            width: 90px;
+            text-align: center;
+        }
+        .proim {
+            width: 350px;
+            border-radius: 20px;
+            display: block; /* Ensures proper spacing */
+            margin: 0 auto; /* Centers the images */
+        }
+        .sec1 {
+            margin-top: 100px; /* Increased to account for fixed header */
+            padding: 20px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        h1 {
+            text-align: center;
+            font-size: 25px;
+            font-weight: normal; /* Ensures normal weight */
+        }
+        p {
+            text-align: center;
+            font-size: 16px;
+            line-height: 1.6; /* Better readability */
+        }
+        .lg1{
+            text-decoration:none;
+            color: white;
+            border-radius:6px;
+            padding:15px;
+            background-color: darkblue;
+            margin-left:60px;
+            border:none;
+        }
+        .lg {
+            text-decoration:none;
+            color: white;
+            border-radius:6px;
+            padding:15px;
+            background-color: darkblue;
+            border:none;
+        }
+        .Gts {
+            text-decoration: none;
+            border-radius: 7px;
+            width: 90%;
+            max-width: 300px;
+            padding: 15px;
+            background-color: darkblue;
+            display: block;
+            text-align: center;
+            color: white;
+            margin: 30px auto;
+            font-size: 18px;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 600px) {
+            .proim {
+                width: 100%;
+            }
+            .logo-text {
+                font-size: 40px;
+            }
+            .myl {
+                flex-direction: column;
+                align-items: center;
+            }
+            .lg1, .lg {
+                width: 30%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="header">
+        <div class="mis">
+            <img src="mlogo2.jpg" alt="Miamor Logo" class="img">
+            <span class="logo-text">iamor</span>
+        </div>
+        <div class="miz">
+            <a href="https://miamorkpokk.github.io/Mirform/" class="msu">signup</a>
+        </div>
+    </section>
+    
+    <section class="sec1">
+        <img src="mai2.jpg" alt="Miamor showcase" class="proim">
+        <h1>MIAMOR WEB</h1>
+        <p>Miamor is the best way to invest online, it's also multinational</p>
+        
+        <div class="myl">
+            <button id="btn1" class="lg1">login</button>
+            <button id="btn2" class="lg">sign up</button>
+        </div>
+        <br>
+        <br>
+        <img src="mai5.jpg" alt="Miamor chat features" class="proim">
+        <p>You can make over $2.5 daily just by chatting with people on the website and you get paid immediately.</p>
+        <img src="mai6.jpg" alt="Miamor gaming" class="proim">
+        <p>On the Miamor platform, you earn money by playing games on the website and get paid for each game you play immediately.</p>
+        
+        <img src="mai7.jpg" alt=""class="proim">
+        <p>In Miamor platform, the more you play more love on people on the website, the more you earn higher, in Miamor platform you can make over 7k daily and also get paid same day as a registered user of the platform</p>
+        
+        
+        <h1>MiAmor Plus Package</h1>
+        <img src="mai3.jpg" alt="Miamor Plus Package" class="proim">
+        <p>Miamor platform has created a nice package for registration called Miamor Plus Package (₦10,000). In this Plus package you'll get over ₦8,000 instant cashback immediately which is also withdrawable. As a registered user on Miamor, you can earn over ₦5k daily in the Plus Package and you can withdraw twice a week.</p>
+        <h1>MiAmor Ultra Package</h1>
+        <img src="mai1.jpg" alt="Miamor Ultra Package" class="proim">
+        <p>This is called the Ultra package on Miamor, known as the second package. After registration you'll get over ₦12,000 instant cashback immediately on the platform which is withdrawable. As a registered member on this package you can make over ₦7k daily and withdraw twice a week.</p>
+        
+        <img src="mai4.jpg" alt="Miamor features" class="proim">
+        <p>Miamor is a multinational platform which means that it is available across Nigeria. This platform can help you earn very well as an online investor.</p>
+
+        <img src="maicerti.jpg" alt="Miamor features" class="proim">
+        <p>Miamor is a verified platform,you may be asking yourself whether miamor is verified or not but the image above answers it all</p>
+        <a href="https://miamorkpokk.github.io/Mirform/" class="Gts">Get Started</a>
+    </section>
+    
+    <script>
+        document.getElementById("btn2").addEventListener("click", () => {
+            window.location.href = "https://miamorkpokk.github.io/Mirform/";
+        });
+
+        document.getElementById("btn1").addEventListener("click", () => {
+            window.location.href = "https://miamorkpokk.github.io/Mirform/";
+        });
+    </script>
+</body>
+</html>
